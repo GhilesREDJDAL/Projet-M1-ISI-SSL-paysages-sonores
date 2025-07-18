@@ -28,13 +28,13 @@ model:
     pretrain_mel_steps: 0  # 0 means GAN objective from the first iteration
 
     # automatic evaluation
-    evaluate_utmos: true
-    evaluate_pesq: true
+    evaluate_utmos: false
+    evaluate_pesq: false
     evaluate_periodicty: false
 
     resume: false
-    resume_config: none
-    resume_model: none
+    resume_config: ./configs/wavtokenizer_M1ProjetISI_75-flac.yaml
+    resume_model: ./WavTokenizer/result/train/train_flac_10sslices_rand3s/lightning_logs/version_8/checkpoints/last.ckpt
 
     feature_extractor:
       class_path: decoder.feature_extractors.EncodecFeatures
